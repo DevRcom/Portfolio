@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - [Seu Nome]</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #0055a5;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+            --card-color: white;
+        }
+        body.dark {
+            --primary-color: #111;
+            --secondary-color: #222;
+            --text-color: #f4f4f4;
+            --bg-color: #1e1e1e;
+            --card-color: #2a2a2a;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: var(--primary-color);
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+            background-color: var(--card-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .toggle-theme {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin: 10px;
+        }
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background-color: var(--secondary-color);
+            border: none;
+            color: white;
+            font-size: 20px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                display: none;
+            }
+            nav.active a {
+                display: block;
+                padding: 10px;
+            }
+            .menu-toggle {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>[Seu Nome]</h1>
+    <p>Arquiteto de Soluções | ECM | BPM | Captura | RPA | Assinatura Digital</p>
+    <button class="toggle-theme" onclick="toggleTheme()">🌙 Tema</button>
+</header>
+
+<nav id="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <a href="#sobre">Sobre</a>
+    <a href="#especialidades">Especialidades</a>
+    <a href="#tecnologias">Tecnologias</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="container">
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+            Sou profissional de Tecnologia da Informação com ampla experiência em Infraestrutura, ECM, BPM, Captura de Documentos e Automação. Atuo como Arquiteto de Soluções no Brasil, América Latina e Europa, desenvolvendo projetos de transformação digital, automação de processos e gestão de conteúdo corporativo.
+        </p>
+    </section>
+
+    <section id="especialidades">
+        <h2>Especialidades</h2>
+        <ul>
+            <li>Arquitetura de Soluções em ECM, BPM e Captura</li>
+            <li>Implantação de Assinatura Digital</li>
+            <li>Desenvolvimento com Kofax TotalAgility</li>
+            <li>Automação de Processos com RPA, OCR, ICR e OMR</li>
+            <li>Gestão de projetos nacionais e internacionais</li>
+            <li>Infraestrutura de servidores, cloud, backup e segurança</li>
+            <li>Desenvolvimento em Java, React, APIs e integrações</li>
+        </ul>
+    </section>
+
+    <section id="tecnologias">
+        <h2>Tecnologias e Ferramentas</h2>
+        <ul>
+            <li>ECM: Perceptive, Alfresco, Laserfiche</li>
+            <li>Captura: Kofax, ICapt, Kodak Image, Avision</li>
+            <li>Desenvolvimento: Java, React, Git, SVN, Eclipse, VS Code</li>
+            <li>Infraestrutura: Apache, Windows Server, Linux, Cloud</li>
+            <li>Automação: Kofax RPA, TotalAgility, OCR/ICR/OMR</li>
+            <li>Outros: Assinatura Digital, Analytics, Mobile Solutions</li>
+        </ul>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos e Inovações</h2>
+        <ul>
+            <li>Implantação de soluções inteligentes de captura de documentos</li>
+            <li>Automatização de processos críticos com RPA e BPM</li>
+            <li>Digitalização de processos físicos para o ambiente digital</li>
+            <li>Implementação de assinatura digital em processos jurídicos e contratuais</li>
+            <li>Arquitetura de ambientes híbridos e seguros com alta disponibilidade</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>
+            ✉️ E-mail: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a><br>
+            🔗 LinkedIn: <a href="https://www.linkedin.com/in/seulinkedin" target="_blank">linkedin.com/in/seulinkedin</a><br>
+            🌐 Website: www.seusite.com
+        </p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 [Seu Nome] | Todos os direitos reservados</p>
+</footer>
+
+<script>
+    // Alternar Tema Claro/Escuro
+    function toggleTheme() {
+        document.body.classList.toggle('dark');
+    }
+
+    // Menu Mobile
+    function toggleMenu() {
+        const nav = document.getElementById('navbar');
+        nav.classList.toggle('active');
+    }
+
+    // Animação de entrada ao rolar
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+</script>
+
+</body>
+</html>
